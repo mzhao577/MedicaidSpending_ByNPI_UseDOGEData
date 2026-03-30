@@ -154,7 +154,6 @@ try:
         "Select NPI Rank",
         min_value=1,
         max_value=total_npis,
-        value=st.session_state.rank,
         key="rank",
         help="Rank 1 = highest total spending"
     )
@@ -164,15 +163,6 @@ try:
     npi = npi_list[current_idx]
     npi_name = npi_names.get(npi, "Unknown")
     npi_total = npi_totals[npi]
-
-    # Display info cards
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric("Provider", npi_name[:30] + "..." if len(npi_name) > 30 else npi_name)
-    with col2:
-        st.metric("NPI", npi)
-    with col3:
-        st.metric("Total Paid (2018-2024)", f"${npi_total:,.0f}")
 
     # Plot
     fig = plot_npi_trends(df, npi, npi_name, npi_total, rank, total_npis)
