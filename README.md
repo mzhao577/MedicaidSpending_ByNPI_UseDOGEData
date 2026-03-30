@@ -4,7 +4,7 @@ Interactive visualization of Medicaid provider spending data (2018-2024) for the
 
 ## Live Demo
 
-**Streamlit App:** [Coming soon - add your Streamlit Cloud URL here]
+**Web App:** https://medicaidspending-bynpi-usedogedata-mzhao577.streamlit.app/
 
 **Google Colab:** [Coming soon - add your Colab link here]
 
